@@ -12,10 +12,33 @@
       color: #fff;
       background-color: #fff;
     }
+
+    .blink {
+      animation: blink-a infinite 5s;
+    }
+    .blink::selection {
+    }
+
+    @keyframes blink-a {
+      0%   { color: #fbfbfb;}
+      8%   { color: #fdfdfd;}
+      16%  { color: #fefefe;}
+      25%  { color: #ffffff;}
+      33%  { color: #fefefe;}
+      41%  { color: #fdfdfd;}
+      50%  { color: #fbfbfb;}
+      58%  { color: #f9f9f9;}
+      66%  { color: #f8f8f8;}
+      75%  { color: #f7f7f7;}
+      83%  { color: #f8f8f8;}
+      91%  { color: #f9f9f9;}
+      100% { color: #fbfbfb;}
+    }
   </style>
 </head>
 <body>
   <p>以下は、カラーユニバーサルデザインの例です。</p>
   <p>① たとえば、<span class="stealth">このような</span>単色の配色は、いかなる色覚特性を持つ利用者にとっても同様に<span class="stealth">視認性</span>が低く、また<span class="stealth">この部分の文字列を判読することができる非標準的なクライアントの利用者や酔狂な人間</span>をあぶり出すことができます。</p>
+  <p>② あなたが多少なりとも有情ならば、<span class="blink">このように</span>単色でない配色をすることもできます。これは①と違って本文・背景をそれぞれ<span class="blink">別の色に</span>しているため、<span class="blink">酔狂でないみなさん</span>にも判読できる可能性があります。</p>
 </body>
 </html>
